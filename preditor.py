@@ -102,13 +102,13 @@ if st.button('Analyse'):
     indice = int(pred)
     #st.write('Severity pred:',gravidade[int(pred)])
     if indice == 0:
-        write('NON-SEVERE')
+        st.write('NON-SEVERE')
         st.image('low-risk.png',width=150)
     else:
         if indice==1:
-            write('SEVERE')
+           st. write('SEVERE')
             st.image('moderate-risk.png',width=150)
         else:
-            write('CRITICAL')
+            st.write('CRITICAL')
             st.image('high-risk.png',width=150)
     
