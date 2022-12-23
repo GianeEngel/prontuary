@@ -15,14 +15,14 @@ gravidade = ['Low','Medium','High']
 
 nome = 'giane.sav'
 modelo = joblib.load(nome)
-st.title('COVID-19 severity predictor')
+st.title('AI-Blood - COVID-19 Prognosis')
 rdw = st.number_input('RDW (%)',min_value=(10),max_value=(9000))
-leu = st.number_input('Leukocytes (x109/L)',min_value=(0),max_value=(270))
-lin = st.number_input('Lymphocytes (x109/L)',min_value=(1))#
-mon = st.number_input('Monocytes (x109/L)',min_value=(1))#
-neu = st.number_input('Neutrophils (x109/L)',min_value=(1),max_value=(35))
-pcr = st.number_input('PCR (mg/dL)')
-pla = st.number_input('Platelets (x109/L)')#
+leu = st.number_input('Leukocytes (10^9/L)',min_value=(0),max_value=(270))
+lin = st.number_input('Lymphocytes (10^9/L)',min_value=(1))#
+mon = st.number_input('Monocytes (10^9/L)',min_value=(1))#
+neu = st.number_input('Neutrophils (10^9/L)',min_value=(1),max_value=(35))
+pcr = st.number_input('CRP (mg/dL)')
+pla = st.number_input('Platelets (10^9/L)')#
 satO = st.selectbox('Saturation Oximetry',('<95','>=95'))
 if satO == '<95':
     sat=0
