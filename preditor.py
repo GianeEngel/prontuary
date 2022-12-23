@@ -44,14 +44,14 @@ if lin == 0:
      nlr = 0
      plr = 0
      aisi = 0
-  elif mon == 0:
-      siri = 0
-  else:
-      siri = nlr/float(mon)
-      aisi = (float(neu)*int(pla)*float(mon))/float(lin)
-      nlr = float(neu)/float(lin)
-      plr = float(pla)/float(lin)
-      sii = plr/float(neu)
+elif mon == 0:
+     siri = 0
+else:
+     siri = nlr/float(mon)
+     aisi = (float(neu)*int(pla)*float(mon))/float(lin)
+     nlr = float(neu)/float(lin)
+     plr = float(pla)/float(lin)
+     sii = plr/float(neu)
 
 #nlr = st.number_input('NLR.1')
 ##nlr = int(neu)/int(lin)
