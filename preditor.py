@@ -40,6 +40,20 @@ else:
     dm2 = 1
 none = st.selectbox('Hypertension (HAS):',('No','Yes'))
 
+
+    limit_float_nlr = round(nlr, 2)
+    st.write('NLR:',limit_float_nlr)
+    limit_float_plr = round(plr, 2)
+    st.write('PLR:',limit_float_plr)
+    limit_float_sii = round(sii, 2)
+    st.write('SII:',limit_float_sii)    
+    limit_float_siri = round(siri, 2)
+    st.write('SIRI:',limit_float_siri)   
+    limit_float_aisi = round(aisi, 2)
+    st.write('AISI:',limit_float_aisi)  
+
+
+
 if lin == 0:
      nlr = 0
      plr = 0
