@@ -41,13 +41,13 @@ else:
 none = st.selectbox('Hypertension (HAS):',('No','Yes'))
 
 
-st.write('RDW:',rdw)
-st.write('Leukocytes:',leu)
-st.write('Lymphocytes:',lin)
-st.write('Monocytes:',mon)
-st.write('Neutrophils:',neu)
-st.write('CRP:',pcr)
-st.write('Platelets:',pla)
+#st.write('RDW:',rdw)
+#st.write('Leukocytes:',leu)
+#st.write('Lymphocytes:',lin)
+#st.write('Monocytes:',mon)
+#st.write('Neutrophils:',neu)
+#st.write('CRP:',pcr)
+#st.write('Platelets:',pla)
 
 
 if lin == 0:
