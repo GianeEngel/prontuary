@@ -40,29 +40,29 @@ else:
     dm2 = 1
 none = st.selectbox('Hypertension (HAS):',('No','Yes'))
 
-if lin == 0:
-     nlr = 0
-     plr = 0
-     aisi = 0
-elif mon == 0:
-     siri = 0
-else:
-     siri = nlr/float(mon)
-     aisi = (float(neu)*int(pla)*float(mon))/float(lin)
-     nlr = float(neu)/float(lin)
-     plr = float(pla)/float(lin)
-     sii = plr/float(neu)
+#if lin == 0:
+ #    nlr = 0
+ #    plr = 0
+ #    aisi = 0
+#elif mon == 0:
+ #    siri = 0
+#else:
+ #    siri = nlr/float(mon)
+ #    aisi = (float(neu)*int(pla)*float(mon))/float(lin)
+ #    nlr = float(neu)/float(lin)
+ #    plr = float(pla)/float(lin)
+ #    sii = plr/float(neu)
 
 #nlr = st.number_input('NLR.1')
-##nlr = int(neu)/int(lin)
+nlr = int(neu)/int(lin)
 #plr = st.number_input('PLR.1')
-##plr = int(pla)/int(lin)
+plr = int(pla)/int(lin)
 #sii = st.number_input('SII.1')
-##sii = plr/int(neu)
+sii = plr/int(neu)
 #siri = st.number_input('SIRI.1')
-##siri = nlr/int(mon)
+siri = nlr/int(mon)
 #aisi = st.number_input('AISI.1')
-##aisi = (int(neu)*int(pla)*int(mon))/int(lin)
+aisi = (int(neu)*int(pla)*int(mon))/int(lin)
 
 dt = {'NLR':[nlr],'PLR':[nlr],'SII':[sii],'SIRI':[siri],'AISI':[aisi]}
 formulas = pd.DataFrame(data=dt)
