@@ -106,7 +106,7 @@ if st.button('Analyse'):
         st.image('low-risk.png',width=150)
     else:
         if indice==1:
-           st. write('SEVERE')
+           st.write('SEVERE')
             st.image('moderate-risk.png',width=150)
         else:
             st.write('CRITICAL')
