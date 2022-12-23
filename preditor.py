@@ -59,11 +59,11 @@ elif mon == 0:
 elif neu == 0:
     sii = 0
 else:
-     siri = nlr/float(mon)
      aisi = (float(neu)*int(pla)*float(mon))/float(lin)
      nlr = float(neu)/float(lin)
      plr = float(pla)/float(lin)
      sii = plr/float(neu)
+     siri = nlr/float(mon)
 
 #nlr = st.number_input('NLR.1')
 ##nlr = int(neu)/int(lin)
