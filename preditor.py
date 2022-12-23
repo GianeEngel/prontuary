@@ -56,6 +56,8 @@ if lin == 0:
      aisi = 0
 elif mon == 0:
      siri = 0
+elif neu == 0:
+    sii = 0
 else:
      siri = nlr/float(mon)
      aisi = (float(neu)*int(pla)*float(mon))/float(lin)
