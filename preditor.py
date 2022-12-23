@@ -100,15 +100,12 @@ pred = modelo.predict([pac])
 
 if st.button('Analyse'):
     indice = int(pred)
-    #st.write('Severity pred:',gravidade[int(pred)])
+    st.write('Severity pred:',gravidade[int(pred)])
     if indice == 0:
-        st.write('NON-SEVERE')
         st.image('low-risk.png',width=150)
     else:
         if indice==1:
-           st.write('SEVERE')
             st.image('moderate-risk.png',width=150)
         else:
-            st.write('CRITICAL')
             st.image('high-risk.png',width=150)
     
