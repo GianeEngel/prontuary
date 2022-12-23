@@ -86,9 +86,9 @@ limit_float_aisi = round(aisi, 2)
 st.write('AISI:',limit_float_aisi)  
 
 
-dt = {'NLR':[nlr],'PLR':[nlr],'SII':[sii],'SIRI':[siri],'AISI':[aisi]}
-formulas = pd.DataFrame(data=dt)
-st.dataframe(formulas)
+#dt = {'NLR':[nlr],'PLR':[nlr],'SII':[sii],'SIRI':[siri],'AISI':[aisi]}
+#formulas = pd.DataFrame(data=dt)
+#st.dataframe(formulas)
 
 pac = [rdw,leu,neu,pcr,sat,dm2,nlr,plr,sii,siri,aisi]
 pred = modelo.predict([pac])
