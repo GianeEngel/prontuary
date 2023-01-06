@@ -15,6 +15,7 @@ gravidade = ['Low','Medium','High']
 
 nome = 'giane.sav'
 modelo = joblib.load(nome)
+modelo1 = joblib.load('giane-pn.sav')
 st.title('AI-Blood - COVID-19 Prognosis')
 siri = 0
 aisi = 0
@@ -28,6 +29,7 @@ mon = st.number_input('Monocytes (10^9/L)')
 neu = st.number_input('Neutrophils (10^9/L)')
 pcr = st.number_input('CRP (mg/dL)')
 pla = st.number_input('Platelets (10^9/L)')
+ferr = st.number_input('Ferritin (μg/mL)')
 satO = st.selectbox('Saturation Oximetry',('<95','>=95'))
 if satO == '<95':
     sat=0
@@ -94,18 +96,23 @@ st.write('AISI:',limit_float_aisi)
 
 pac = [rdw,leu,neu,pcr,sat,dm2,nlr,plr,sii,siri,aisi]
 pred = modelo.predict([pac])
-
+pac1 = [mon,lin,pla,pcr,ferr]
+pred1 = modelo1.predict([pac1])
 
 
 
 if st.button('Analyse'):
     indice = int(pred)
     st.write('Severity pred:',gravidade[int(pred)])
+    st.write(classes[int(pred1)])
     if indice == 0:
         st.image('low-risk.png',width=150)
+        st.write(classes[int(pred1)])
     else:
         if indice==1:
             st.image('moderate-risk.png',width=150)
+            st.write(classes[int(pred1)])
         else:
             st.image('high-risk.png',width=150)
+            st.write(classes[int(pred1)])
     
