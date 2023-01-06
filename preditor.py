@@ -22,6 +22,7 @@ aisi = 0
 nlr = 0
 plr = 0
 sii = 0
+frr = 0
 rdw = st.number_input('RDW (%)')
 leu = st.number_input('Leukocytes (10^9/L)')
 lin = st.number_input('Lymphocytes (10^9/L)')
@@ -96,6 +97,7 @@ st.write('AISI:',limit_float_aisi)
 
 pac = [rdw,leu,neu,pcr,sat,dm2,nlr,plr,sii,siri,aisi]
 pred = modelo.predict([pac])
+
 pac1 = [mon,lin,pla,pcr,ferr]
 pred1 = modelo1.predict([pac1])
 
@@ -104,7 +106,6 @@ pred1 = modelo1.predict([pac1])
 if st.button('Analyse'):
     indice = int(pred)
     st.write('Severity pred:',gravidade[int(pred)])
-    st.write(classes[int(pred1)])
     if indice == 0:
         st.image('low-risk.png',width=150)
         st.write(classes[int(pred1)])
