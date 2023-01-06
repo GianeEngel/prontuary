@@ -12,7 +12,7 @@ import streamlit as st
 import pandas as pd
 
 gravidade = ['Low','Medium','High']
-
+classes = ['COVID-19 negative','COVID-19 positive']
 nome = 'giane.sav'
 modelo = joblib.load(nome)
 modelo1 = joblib.load('giane-pn.sav')
