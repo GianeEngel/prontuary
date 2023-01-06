@@ -105,7 +105,7 @@ pred1 = modelo1.predict([pac1])
 if st.button('Diagnosis'):
     st.write(classes[int(pred1)])
 
-if st.button('Analyse'):
+if st.button('Prognosis'):
     indice = int(pred)
     st.write('Severity pred:',gravidade[int(pred)])
     if indice == 0:
