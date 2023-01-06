@@ -108,12 +108,11 @@ if st.button('Analyse'):
     st.write('Severity pred:',gravidade[int(pred)])
     if indice == 0:
         st.image('low-risk.png',width=150)
-        st.write(classes[int(pred1)])
     else:
         if indice==1:
             st.image('moderate-risk.png',width=150)
-            st.write(classes[int(pred1)])
         else:
             st.image('high-risk.png',width=150)
-            st.write(classes[int(pred1)])
     
+if st.button('Diagnosis'):
+    st.write(classes[int(pred1)])
