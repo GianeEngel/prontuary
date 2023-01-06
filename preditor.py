@@ -102,6 +102,8 @@ pac1 = [mon,lin,pla,pcr,ferr]
 pred1 = modelo1.predict([pac1])
 
 
+if st.button('Diagnosis'):
+    st.write(classes[int(pred1)])
 
 if st.button('Analyse'):
     indice = int(pred)
@@ -114,5 +116,4 @@ if st.button('Analyse'):
         else:
             st.image('high-risk.png',width=150)
     
-if st.button('Diagnosis'):
-    st.write(classes[int(pred1)])
+
